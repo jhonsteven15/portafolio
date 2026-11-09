@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Jhon Steven Penilla — Ingeniero Multimedia y Diseñador UX/UI</title>
+<meta name="description" content="Portafolio de Jhon Steven Penilla: diseño UX/UI, modelado y animación 3D, motion, matte painting y contenido para redes. Cali, Colombia.">
+<meta property="og:title" content="Jhon Steven Penilla — Ingeniero Multimedia y Diseñador UX/UI">
+<meta property="og:description" content="Portafolio de Jhon Steven Penilla: diseño UX/UI, modelado y animación 3D, motion, matte painting y contenido para redes. Cali, Colombia.">
+<meta property="og:type" content="website">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap');
+html{scroll-behavior:smooth;background:#140F0B}
+body{margin:0;padding:0;background:#140F0B}
+*{box-sizing:border-box}
+::selection{background:#7FB2D9;color:#140F0B}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes deviceScroll{0%{transform:translateY(0)}8%{transform:translateY(0)}46%{transform:translateY(-82%)}58%{transform:translateY(-82%)}96%{transform:translateY(0)}100%{transform:translateY(0)}}
+.mq:hover .mq-track{animation-play-state:paused}
+@keyframes modalIn{from{opacity:0;transform:translateY(30px) scale(0.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes jspBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+@keyframes jspTwinkle{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes marqueeX{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes fadeOut{from{opacity:1}to{opacity:0}}
+@keyframes modalOut{from{opacity:1;transform:translateY(0) scale(1)}to{opacity:0;transform:translateY(24px) scale(0.97)}}
+a{color:#D8660F;text-decoration:none}
+a:hover{color:#7FB2D9}
+@media (min-width: 769px) {
+  [data-nav-bar]{flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:0!important;}
+  [data-nav-bar] > div{justify-content:flex-end!important;}
+  [data-intro-grid]{display:grid!important;grid-template-columns:0.85fr 1.15fr!important;align-items:center!important;max-width:1120px!important;}
+  [data-intro-text]{order:2!important;text-align:left!important;}
+  [data-intro-img]{order:1!important;}
+  [data-sobre-grid]{display:grid!important;grid-template-columns:0.9fr 1.4fr!important;align-items:start!important;max-width:1280px!important;}
+  [data-exp-list]{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))!important;gap:clamp(24px,3vw,40px)!important;}
+  [data-exp-row]{border-bottom:none!important;}
+  [data-exp-row] [data-exp-head]{cursor:default!important;padding:0 0 10px!important;}
+  [data-exp-arrow]{display:none!important;}
+  [data-exp-panel]{display:block!important;}
+  [data-intro-em]{font-size:55px!important;}
+  [data-intro-glow]{background:radial-gradient(ellipse 46% 62% at 26% 52%, rgba(216,102,15,0.42), rgba(216,102,15,0.10) 46%, transparent 70%)!important;}
+}
+@media (max-width: 768px) {
+  [data-sm-center]{text-align:center!important;}
+  [data-sm-center-row]{justify-content:center!important;}
+  [data-sm-title]{border-bottom:1px solid rgba(255,255,255,0.35)!important;padding-bottom:14px!important;}
+}
+</style>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+</helmet>
+
+<div style="position:relative;min-height:100vh;overflow-x:clip;background:#140F0B;color:#EDEEF2;font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;">
+
+  <!-- Three.js particle field, fixed full-page background -->
+  <div style="position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(216,102,15,0.14), transparent 60%), radial-gradient(ellipse 60% 40% at 100% 100%, rgba(127,178,217,0.08), transparent 55%);"></div>
+
+  <!-- NAV -->
+  <nav data-nav-bar="1" style="position:fixed;top:0;left:0;right:0;z-index:20;display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px clamp(20px,5vw,56px);backdrop-filter:blur(10px);background:linear-gradient(180deg, rgba(14,10,7,0.78), rgba(14,10,7,0));">
+    <a href="#inicio" style="font-family: 'Poppins',sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.08em; color: #EDEEF2; font-style: normal">PORTFOLIO</a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,3vw,40px);">
+      <a href="#sobre-mi" style="font-size: clamp(10px,2.4vw,13px); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #EDEEF2; opacity: 0.85; font-family: Poppins; white-space: nowrap">Sobre mí</a>
+      <a href="#proyectos" style="font-size: clamp(10px,2.4vw,13px); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #EDEEF2; opacity: 0.85; font-family: Poppins; white-space: nowrap">Proyectos</a>
+      <a href="#contacto" style="font-size: clamp(10px,2.4vw,13px); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #EDEEF2; opacity: 0.85; font-family: Poppins; white-space: nowrap">Contacto</a>
+      <a href="../" style="font-size: clamp(10px,2.4vw,13px); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #D8660F; opacity: 0.95; font-family: Poppins; white-space: nowrap" aria-label="View in English">EN</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" data-screen-label="Hero" style="position:relative;z-index:1;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:0 20px 56px;text-align:center;background:#1A130D;">
+    <video ref="{{ setVideoRef }}" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="../assets/hero-poster.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transform-origin:50% 0%;transform:scale(1.14) translateY(3%);z-index:0;pointer-events:none;">
+      <source src="../assets/avatar-wave-2k.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg, rgba(20,10,2,0.62) 0%, rgba(20,10,2,0.08) 24%, rgba(10,6,3,0.22) 48%, rgba(2,1,0,0.7) 78%, rgba(0,0,0,1) 100%);"></div>
+    <div style="position: absolute; inset: 0; z-index: 1; pointer-events: none; box-shadow: 0px 0px 160px 40px #D26C1674; overflow: visible"></div>
+
+    <div style="position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; opacity: 0; transform: translateY(24px); transition: opacity .9s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.25,.1,.25,1)" data-reveal="1">
+      <div style="font-family: Helvetica; font-style: italic; font-size: clamp(14px,1.5vw,18px); letter-spacing: 0.14em; color: #FFFFFF; text-transform: uppercase; margin-bottom: 14px; opacity: 0.95; font-weight: 800; text-shadow: 0px 4px 12px #000000">Portfolio 2026</div>
+      <h1 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2.2rem,7vw,5.4rem);line-height:1.05;letter-spacing:-0.01em;margin:0;color:#F5F4F2;text-shadow:0 4px 24px rgba(0,0,0,0.5);max-width:16ch;">Jhon Steven Penilla</h1>
+      
+    <p style="position: static; z-index: 4; font-family: Poppins; font-style: italic; font-weight: 600; font-size: clamp(1.3rem,2.6vw,2rem); color: #FFFFFF; opacity: 1; margin: 32px 0 0; text-shadow: 0 2px 6px rgba(0,0,0,0.85), 0 4px 24px rgba(0,0,0,0.6)">Ingeniero Multimedia</p></div>
+
+    <div style="position:relative;z-index:3;margin-top:30px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.25,.1,.25,1) 0.15s,transform .9s cubic-bezier(.25,.1,.25,1) 0.15s" data-reveal="1">
+      <a href="#proyectos" style="display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:999px;border:1px solid rgba(237,238,242,0.22);font-size:12px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:#F5F4F2;background:rgba(237,238,242,0.08);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 24px rgba(0,0,0,0.25);transition:background .2s,border-color .2s;" style-hover="background:rgba(216,102,15,0.22);border-color:#D8660F;">Ver proyectos →</a>
+    </div>
+  </section>
+
+  <!-- BANNER: Diseño -->
+  <div aria-hidden="true" style="position:relative;z-index:2;overflow:hidden;background:#FF7200;padding:16px 0;">
+    <div style="display:flex;width:max-content;animation:marqueeX 46s linear infinite;will-change:transform;">
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Diseño</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#140F0B;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Portfolio 2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #140F0B;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Diseño</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#140F0B;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Portfolio 2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #140F0B;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- EDITORIAL / INTRO -->
+  <section data-screen-label="Intro editorial" style="position:relative;z-index:1;min-height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:clamp(96px,12vh,140px) clamp(20px,5vw,72px);background:#000000;">
+    <div style="position:absolute;inset:0;z-index:0;pointer-events:none;background:#0a0705;"></div>
+    <div data-intro-glow="1" style="position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 70% 55% at 50% 64%, rgba(216,102,15,0.42), rgba(216,102,15,0.10) 46%, transparent 70%);mix-blend-mode:screen;"></div>
+    <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 95% 85% at 50% 50%, transparent 40%, rgba(0,0,0,0.72) 100%);"></div>
+
+    <!-- corner meta -->
+    <div style="position:absolute;top:clamp(20px,4vh,40px);left:clamp(20px,5vw,56px);z-index:3;font-size:13px;font-weight:500;letter-spacing:0.06em;color:#EDEEF2;opacity:0.9;">Portfolio</div>
+    <div style="position: absolute; top: clamp(20px,4vh,40px); right: clamp(20px,5vw,56px); z-index: 3; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: #FFFFFF; opacity: 0.95">©2026</div>
+    <div style="position:absolute;bottom:clamp(20px,4vh,40px);left:clamp(20px,5vw,56px);z-index:3;font-size:clamp(12px,1.3vw,15px);font-weight:500;letter-spacing:0.03em;color:#EDEEF2;opacity:0.9;">jhonsteven150102@hotmail.com</div>
+    <div style="position:absolute;bottom:clamp(20px,4vh,40px);right:clamp(20px,5vw,56px);z-index:3;font-size:clamp(12px,1.3vw,15px);font-weight:500;letter-spacing:0.03em;color:#EDEEF2;opacity:0.9;">+57 310 209 2564</div>
+
+    <div data-intro-grid="1" style="position:relative;z-index:2;width:100%;max-width:720px;display:flex;flex-direction:column;align-items:center;gap:clamp(32px,5vw,56px);">
+      <p data-intro-text="1" style="margin:0;text-align:center;font-family:'Poppins',sans-serif;font-weight:500;font-size:clamp(1.8rem,3.6vw,3.2rem);line-height:1.14;letter-spacing:-0.01em;color:#F5F4F2;text-shadow:0 4px 30px rgba(0,0,0,0.7);">Hola, soy <em style="font-family: ui-monospace; font-weight: 900; font-style: italic; color: #FFFFFF; text-transform: capitalize; font-size: 1.1em" data-intro-em="1">Steven</em>, <em data-intro-em="1" style="font-family: ui-monospace; font-weight: 900; font-style: italic; color: #FFFFFF; font-size: 1.1em">Ingeniero Multimedia</em>. Aquí podrás ver algunos de mis trabajos y diseños.</p>
+      <div data-intro-img="1" style="display:flex;justify-content:center;">
+        <img src="../imagen-perfil-photoroom-mrli7c5g-svor.png" alt="Jhon Steven Penilla" style="width:100%;max-width:340px;height:auto;object-fit:contain;filter:grayscale(1) contrast(1.06);-webkit-mask-image:linear-gradient(180deg, #000 0%, #000 38%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.25) 70%, transparent 86%);mask-image:linear-gradient(180deg, #000 0%, #000 38%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.25) 70%, transparent 86%);">
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER: Sobre mí -->
+  <div aria-hidden="true" style="position:relative;z-index:2;overflow:hidden;background:#FFFFFF;padding:16px 0;">
+    <div style="display:flex;width:max-content;animation:marqueeX 52s linear infinite;will-change:transform;">
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Sobre mí</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#FF7200;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #FF7200;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Sobre mí</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#FF7200;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #FF7200;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" data-screen-label="Sobre mi" style="position: relative; z-index: 1; padding: clamp(100px,14vh,160px) clamp(24px,7vw,96px); background-color: #FF7200">
+    <div data-sobre-grid="1" style="display: flex; flex-direction: column; gap: clamp(56px,7vh,96px); max-width: 780px; margin: 0 auto">
+
+      <!-- Columna izquierda -->
+      <div style="display:flex;flex-direction:column;gap:clamp(32px,4vh,48px);">
+        <div style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.25,.1,.25,1)" data-reveal="1">
+          <h2 data-sm-center="1" data-sm-title="1" style="margin: 0 0 24px; font-family: 'Poppins',sans-serif; font-weight: 600; font-size: clamp(3.2rem,7vw,5.6rem); line-height: 1; color: #FFFFFF"><em style="font-family: ui-monospace; font-style: italic; font-weight: 900; font-size: 95px">¡H</em>ola!</h2>
+          <p data-sm-center="1" style="margin: 0 0 18px; font-size: clamp(0.95rem,1.3vw,1.05rem); line-height: 1.75; color: #FFFFFF; opacity: 0.72; text-align: justify; font-weight: 400; font-family: Poppins">Soy Jhon Steven Penilla, Ingeniero Multimedia con más de 3 años de experiencia en diseño gráfico, UX/UI, producción audiovisual y gestión de redes sociales. Me apasiona el arte y las diversas formas de expresión, y estoy constantemente en búsqueda de las mejores herramientas para abordar desafíos.</p>
+          
+        </div>
+
+        <div style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.25,.1,.25,1) 0.15s,transform .9s cubic-bezier(.25,.1,.25,1) 0.15s" data-reveal="1">
+            <h3 data-sm-center="1" data-sm-title="1" style="margin: 0 0 28px; font-family: 'Poppins',sans-serif; font-weight: 600; font-size: clamp(2rem,4vw,3rem); line-height: 1; color: #FFFFFF; opacity: 1"><em style="font-family: ui-monospace; font-style: italic; font-weight: 900; font-size: 1.15em">E</em>ducación</h3>
+            <div data-sm-center="1" style="font-weight: 700; font-size: clamp(1rem,1.4vw,1.15rem); color: #FFFFFF; line-height: 1.4; font-family: Poppins; opacity: 1">Universidad de San Buenaventura Cali</div>
+            <p data-sm-center="1" style="margin: 8px 0 20px; font-size: clamp(0.85rem,1.1vw,0.95rem); line-height: 1.65; color: #FFFFFF; opacity: 0.72; font-family: Poppins">Ingeniero Multimedia / Estudios culminados.</p>
+            
+            
+          </div><div style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.25,.1,.25,1) 0.2s,transform .9s cubic-bezier(.25,.1,.25,1) 0.2s" data-reveal="1">
+            <h3 data-sm-center="1" data-sm-title="1" style="margin: 0 0 28px; font-family: 'Poppins',sans-serif; font-weight: 600; font-size: clamp(2rem,4vw,3rem); line-height: 1; color: #FFFFFF; opacity: 1"><em style="font-family: ui-monospace; font-style: italic; font-weight: 700; font-size: 1.15em; color: #FFFFFF; opacity: 1">H</em>erramientas</h3>
+            <div data-sm-center-row="1" style="display:flex;gap:10px;flex-wrap:wrap;">
+              <span title="Figma" style="width:44px;height:44px;border-radius:10px;background:#1E1E1E;display:flex;align-items:center;justify-content:center;">
+                <svg width="20" height="30" viewBox="0 0 200 300"><path fill="#F24E1E" d="M50 0h50v100H50a50 50 0 010-100z"></path><path fill="#FF7262" d="M100 0h50a50 50 0 010 100h-50z"></path><path fill="#A259FF" d="M50 100h50v100H50a50 50 0 010-100z"></path><path fill="#1ABCFE" d="M100 150a50 50 0 11100 0 50 50 0 01-100 0z"></path><path fill="#0ACF83" d="M50 200h50v50a50 50 0 11-50-50z"></path></svg>
+              </span>
+              <span title="CapCut" style="width:44px;height:44px;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;align-items:center;justify-content:center;"><img src="../assets/logo-capcut.jpg" alt="CapCut" style="width:100%;height:100%;object-fit:cover;display:block;"></span>
+              <span title="Adobe Photoshop" style="width:44px;height:44px;border-radius:10px;background:#001E36;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:#31A8FF;">Ps</span>
+              <span title="Adobe Premiere Pro" style="width:44px;height:44px;border-radius:10px;background:#00005B;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:#9999FF;">Pr</span>
+              <span title="Adobe Illustrator" style="width:44px;height:44px;border-radius:10px;background:#330000;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:16px;color:#FF9A00;">Ai</span>
+              <span title="Blender" style="width:44px;height:44px;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;align-items:center;justify-content:center;"><img src="../assets/logo-blender.webp" alt="Blender" style="width:100%;height:100%;object-fit:cover;display:block;"></span>
+            </div>
+          </div>
+      </div>
+
+      <!-- Columna derecha -->
+      <div style="display:flex;flex-direction:column;gap:clamp(40px,5vh,64px);">
+        <div style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.25,.1,.25,1) 0.1s,transform .9s cubic-bezier(.25,.1,.25,1) 0.1s" data-reveal="1">
+          <h3 data-sm-center="1" data-sm-title="1" style="margin: 0 0 32px; font-family: 'Poppins',sans-serif; font-weight: 600; font-size: clamp(2rem,4vw,3rem); line-height: 1; color: #FFFFFF"><em style="font-family: ui-monospace; font-style: italic; font-weight: 700; font-size: 60px">E</em>xperiencia</h3>
+          <div data-exp-list="1" style="display:flex;flex-direction:column;">
+            <sc-for list="{{ experienceItems }}" as="ex" hint-placeholder-count="3">
+              <div data-exp-row="1" style="border-bottom:1px solid rgba(255,255,255,0.28);">
+                <div data-exp-head="1" onClick="{{ ex.toggle }}" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;cursor:pointer;">
+                  <div style="font-weight: 700; font-size: clamp(1rem,1.4vw,1.15rem); color: #FFFFFF; line-height: 1.4; font-family: Poppins">{{ ex.company }}<br>{{ ex.period }}<br><span style="font-weight: 600; font-family: &quot;Cormorant Garamond&quot;, serif; font-style: italic; font-size: 1.15em; color: rgb(255, 255, 255);">{{ ex.role }}</span></div>
+                  <span data-exp-arrow="1" aria-hidden="true" style="flex-shrink:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.4);display:flex;align-items:center;justify-content:center;">
+                    <svg width="13" height="13" viewBox="0 0 24 24" style="display:block;transform-origin:50% 50%;transition:transform .3s ease;transform: {{ ex.arrow }};"><path d="M4 8 L12 16 L20 8" stroke="#FFFFFF" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </span>
+                </div>
+                <ul data-exp-panel="1" style="display: {{ ex.displayVal }}; margin: 0 0 22px; padding-left: 18px; font-size: clamp(0.85rem,1.1vw,0.95rem); line-height: 1.65; color: #FFFFFF; opacity: 0.78; text-align: left; font-family: Poppins">
+                  <sc-for list="{{ ex.bullets }}" as="bl" hint-placeholder-count="3">
+                    <li>{{ bl }}</li>
+                  </sc-for>
+                </ul>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: clamp(40px,5vw,64px); align-items: start">
+          
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER: Proyectos -->
+  <div aria-hidden="true" style="position:relative;z-index:2;overflow:hidden;background:#0A0705;padding:16px 0;border-top:1px solid rgba(255,255,255,0.12);border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div style="display:flex;width:max-content;animation:marqueeX 48s linear infinite;will-change:transform;">
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;">Proyectos</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#FF7200;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;">2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #FF7200;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;">Proyectos</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#FF7200;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;">2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #FF7200;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" data-screen-label="Proyectos" style="position: relative; z-index: 1; padding: 80px clamp(20px,6vw,72px) 140px; background-color: #000000; overflow: hidden">
+    <div style="text-align:center;margin-bottom:40px;opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.25,.1,.25,1),transform .9s cubic-bezier(.25,.1,.25,1)" data-reveal="1">
+      <div style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#D8660F;margin-bottom:16px;font-weight:600;">Trabajo</div>
+      <h3 style="margin: 0 0 22px; font-family: 'Poppins',sans-serif; font-weight: 600; font-size: 48px; line-height: 1; color: #FFFFFF"><em style="font-family: ui-monospace; font-style: italic; font-weight: 700; font-size: 60px;">P</em>royectos</h3>
+      <p style="font-size: 14px; color: #FFFFFF; opacity: 0.55; margin: 12px 0 0">Arrastra para explorar · haz clic para ver el caso</p>
+    </div><div ref="{{ setCarouselViewport }}" data-car-viewport="1" style="overflow:visible;cursor:grab;padding:40px 0 56px;margin:0 calc(-1 * clamp(20px,6vw,72px));touch-action:pan-y;user-select:none;-webkit-user-select:none;">
+      <div ref="{{ setCarouselTrack }}" data-car-track="1" style="display:flex;gap:clamp(24px,3vw,44px);width:max-content;will-change:transform;padding:0 10px;">
+        <sc-for list="{{ carouselItems }}" as="c" hint-placeholder-count="10">
+          <div onClick="{{ openProject }}" data-project-id="{{ c.id }}" data-car-card="1" style="flex-shrink:0;will-change:transform;cursor:pointer;">
+            <div style="transition:transform .45s cubic-bezier(.22,.9,.3,1);" style-hover="transform:translateY(-12px) scale(1.025);">
+              <div style="position:relative;padding:12px;border-radius:28px;background:linear-gradient(155deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0.38) 100%);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.65);box-shadow:0 30px 60px rgba(120,60,15,0.28), inset 0 1px 0 rgba(255,255,255,0.85);transition:box-shadow .45s ease,border-color .45s ease;" style-hover="box-shadow:0 38px 76px rgba(120,60,15,0.42), 0 0 0 1px rgba(255,163,72,0.35), inset 0 1px 0 rgba(255,255,255,0.9);border-color:rgba(255,190,120,0.95);">
+                <div style="position:absolute;inset:0;border-radius:28px;pointer-events:none;background:linear-gradient(115deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.08) 26%, transparent 45%);"></div>
+                <div style="position: relative; width: clamp(230px,25vw,360px); aspect-ratio: 4/5; border-radius: 18px; overflow: hidden">
+                  <sc-if value="{{ c.coverEl }}">
+                    {{ c.coverEl }}
+                  </sc-if>
+                </div>
+                <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 4px 4px 6px;">
+                  <span style="flex:1;min-width:0;font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #FFFFFF;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ c.title }}</span>
+                  <span style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.7);box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;color:#140F0B;font-size:14px;">↗</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    
+  </section>
+
+  <!-- MODAL PROYECTO -->
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeProjectFromBackdrop }}" style="position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px);background:rgba(10,7,5,0.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);animation:{{ backdropAnim }};">
+      <div data-modal-panel="1" style="position:relative;width:100%;max-width:1040px;max-height:90vh;overflow-y:auto;border-radius:26px;background:#FFFFFF;border:1px solid rgba(20,15,11,0.08);box-shadow:0 40px 100px rgba(0,0,0,0.45);animation:{{ panelAnim }};">
+        <button onClick="{{ closeProject }}" style="position:sticky;top:18px;margin-left:calc(100% - 60px);z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid rgba(20,15,11,0.15);background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);color:#140F0B;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+
+        <div style="padding:0 clamp(24px,5vw,64px) clamp(32px,5vh,56px);margin-top:-24px;">
+          <sc-if value="{{ isCaseStudy }}" hint-placeholder-val="{{ false }}">
+            <!-- ENCABEZADO (H1) -->
+            <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding:clamp(8px,2vh,20px) 0 clamp(34px,5vh,54px);">
+              <span style="padding:7px 16px;border-radius:999px;border:1.5px solid rgba(20,15,11,0.2);font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#140F0B;">{{ activeProject.kicker }}</span>
+              <h1 style="margin:0;font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.03;letter-spacing:-0.01em;color:#140F0B;">{{ activeProject.modalTitle }}</h1>
+              <p style="margin:0;max-width:56ch;font-size:clamp(0.95rem,1.3vw,1.05rem);line-height:1.7;color:#140F0B;opacity:0.68;text-wrap:pretty;">{{ activeProject.description }}</p>
+              <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:2px;">
+                <sc-for list="{{ activeProject.tools }}" as="t" hint-placeholder-count="3">
+                  <span style="padding:6px 14px;border-radius:999px;background:rgba(20,15,11,0.05);border:1px solid rgba(20,15,11,0.15);font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:600;color:#140F0B;">{{ t }}</span>
+                </sc-for>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:4px;">
+                <sc-if value="{{ activeProject.link }}" hint-placeholder-val="{{ false }}">
+                  <a href="{{ activeProject.link }}" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:10px;padding:12px 26px;border-radius:999px;background:#FF7200;color:#140F0B;font-family:'Poppins',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;transition:transform .25s ease,box-shadow .25s ease;" style-hover="transform:translateY(-2px);box-shadow:0 12px 28px rgba(216,102,15,0.35);">
+                    <span>{{ activeProject.linkLabel }}</span>
+                    <span aria-hidden="true" style="font-size:15px;">↗</span>
+                  </a>
+                </sc-if>
+                
+              </div><span style="font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;color:rgba(20,15,11,0.4);">{{ activeProject.caseYear }}</span>
+            </div>
+
+            <!-- BLOQUES · columna única, lectura vertical -->
+            <div style="display:flex;flex-direction:column;gap:clamp(26px,4vh,44px);max-width:860px;margin:0 auto;border-top:1px solid rgba(20,15,11,0.1);padding-top:clamp(30px,5vh,48px);">
+              <sc-for list="{{ caseBlocks }}" as="b" hint-placeholder-count="3">
+                <div style="display:flex;flex-direction:column;gap:14px;">
+                  <sc-if value="{{ b.isSection }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding-top:clamp(6px,1.5vh,18px);">
+                      <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.18em;color:#D8660F;">{{ b.num }}</span>
+                      <h2 style="margin:0;font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.12;color:#140F0B;">{{ b.title }}</h2>
+                      <sc-if value="{{ b.text }}" hint-placeholder-val="{{ false }}">
+                        <p style="margin:0;max-width:58ch;font-size:14px;line-height:1.7;color:#140F0B;opacity:0.66;text-wrap:pretty;">{{ b.text }}</p>
+                      </sc-if>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.isBrowser }}" hint-placeholder-val="{{ false }}">
+                    <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,15,11,0.12);box-shadow:0 20px 50px rgba(20,15,11,0.15);">
+                      <div style="display:flex;align-items:center;gap:8px;padding:10px 14px;background:#F1EDE8;border-bottom:1px solid rgba(20,15,11,0.08);">
+                        <span style="width:10px;height:10px;border-radius:50%;background:#FF5F57;"></span>
+                        <span style="width:10px;height:10px;border-radius:50%;background:#FEBC2E;"></span>
+                        <span style="width:10px;height:10px;border-radius:50%;background:#28C840;"></span>
+                        <span style="margin-left:10px;flex:1;max-width:360px;padding:5px 14px;border-radius:999px;background:#FFFFFF;font-size:11px;color:rgba(20,15,11,0.45);font-family:ui-monospace,monospace;white-space:nowrap;overflow:hidden;">{{ b.url }}</span>
+                      </div>
+                      {{ b.browserImgEl }}
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.isEmbed }}" hint-placeholder-val="{{ false }}">
+                    <div style="position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#140F0B;border:1px solid rgba(20,15,11,0.12);box-shadow:0 16px 40px rgba(20,15,11,0.14);">
+                      <iframe src="{{ b.src }}" title="{{ b.title }}" allowFullScreen="{{ true }}" allow="autoplay; fullscreen; xr-spatial-tracking" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.imgEl }}" hint-placeholder-val="{{ false }}">
+                    <div style="border-radius:16px;overflow:hidden;border:1px solid rgba(20,15,11,0.1);box-shadow:0 16px 40px rgba(20,15,11,0.12);">
+                      {{ b.imgEl }}
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.isVideo }}" hint-placeholder-val="{{ false }}">
+                    <div style="position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#0A0705;border:1px solid rgba(20,15,11,0.12);box-shadow:0 16px 40px rgba(20,15,11,0.14);">
+                      <video ref="{{ setVideoRef }}" src="{{ b.src }}" controls="{{ true }}" preload="metadata" playsinline="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#0A0705;"></video>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.isReels }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(12px,1.8vw,20px);">
+                      <sc-for list="{{ b.reelVids }}" as="v" hint-placeholder-count="3">
+                        <div style="flex:0 0 auto;width:clamp(150px,20vw,220px);aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#140F0B;border:1px solid rgba(20,15,11,0.12);box-shadow:0 16px 36px rgba(20,15,11,0.16);">
+                          <video ref="{{ setVideoRef }}" src="{{ v.src }}" muted="" loop="" playsinline="" preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.isDevice }}" hint-placeholder-val="{{ false }}">
+                    <div style="position:relative;width:100%;max-width:640px;margin:0 auto;aspect-ratio:1920/1248;">
+                      <div style="position: absolute; top: 11.74%; left: 11.69%; width: 76.62%; height: 76.52%; overflow: hidden; background: #FFFFFF; border-radius: 4%; z-index: 1;">
+                        {{ b.deviceImgEl }}
+                      </div>
+                      {{ b.frameImgEl }}
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.isGrid }}" hint-placeholder-val="{{ false }}">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:clamp(12px,1.6vw,18px);">
+                      <sc-for list="{{ b.gridImgs }}" as="g" hint-placeholder-count="4">
+                        <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(20,15,11,0.1);box-shadow:0 12px 28px rgba(20,15,11,0.12);">{{ g.imgEl }}</div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.sliderEl }}" hint-placeholder-val="{{ false }}">
+                    {{ b.sliderEl }}
+                  </sc-if>
+                  <sc-if value="{{ b.isModels }}" hint-placeholder-val="{{ false }}">
+                    <div onMouseEnter="{{ pauseModels }}" onMouseLeave="{{ resumeModels }}" style="position: relative; aspect-ratio: 16/9; border-radius: 16px; overflow: hidden; border: 1px solid rgba(20,15,11,0.1); background-color: #FFFFFF">
+                      <model-viewer src="{{ currentModelSrc }}" alt="{{ currentModelName }}" camera-controls="true" auto-rotate="true" shadow-intensity="1" exposure="1" interaction-prompt="none" style="width:100%;height:100%;display:block;"></model-viewer>
+                      <div style="position:absolute;top:14px;left:14px;display:flex;align-items:center;gap:10px;pointer-events:none;">
+                        <span style="padding:7px 14px;border-radius:999px;background:rgba(20,15,11,0.75);backdrop-filter:blur(8px);color:#FFFFFF;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">{{ currentModelName }}</span>
+                        <span style="font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;color:rgba(20,15,11,0.5);">{{ modelCounter }}</span>
+                      </div>
+                      <button onClick="{{ prevModel }}" aria-label="Modelo anterior" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid rgba(20,15,11,0.15);background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);color:#140F0B;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;" style-hover="background:#FF7200;">‹</button>
+                      <button onClick="{{ nextModel }}" aria-label="Modelo siguiente" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:1px solid rgba(20,15,11,0.15);background:rgba(255,255,255,0.85);backdrop-filter:blur(8px);color:#140F0B;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;" style-hover="background:#FF7200;">›</button>
+                      <div style="position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:8px;">
+                        <sc-for list="{{ modelDots }}" as="d" hint-placeholder-count="3">
+                          <button onClick="{{ d.go }}" aria-label="{{ d.name }}" style="width:9px;height:9px;padding:0;border-radius:50%;border:0;cursor:pointer;background: {{ d.bg }};transition:background .3s;"></button>
+                        </sc-for>
+                      </div>
+                    </div>
+                  </sc-if>
+                  <sc-if value="{{ b.caption }}" hint-placeholder-val="{{ false }}">
+                    <p style="margin:0;text-align:center;font-size:12.5px;line-height:1.6;color:rgba(20,15,11,0.55);max-width:60ch;margin-left:auto;margin-right:auto;">{{ b.caption }}</p>
+                  </sc-if>
+                  <sc-if value="{{ b.link }}" hint-placeholder-val="{{ false }}">
+                    <a href="{{ b.link }}" target="_blank" rel="noreferrer" style="margin:0 auto;display:inline-flex;align-items:center;gap:6px;font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#D8660F;">{{ b.linkLabel }} <span aria-hidden="true">↗</span></a>
+                  </sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isLegacy }}" hint-placeholder-val="{{ false }}">
+          <div style="text-align:center;margin-bottom:36px;">
+            <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#D8660F;font-weight:700;margin-bottom:12px;">{{ activeProject.kicker }}</div>
+            <h3 style="margin:0 0 14px;font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(1.8rem,4vw,3rem);color:#140F0B;">{{ activeProject.title }}</h3>
+            <p style="margin:0 auto;max-width:56ch;font-size:clamp(0.9rem,1.2vw,1rem);line-height:1.7;color:#140F0B;opacity:0.7;">{{ activeProject.description }}</p>
+            <sc-if value="{{ activeProject.link }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:22px;">
+                <a href="{{ activeProject.link }}" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:10px;padding:13px 28px;border-radius:999px;background:#FF7200;color:#140F0B;font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;transition:transform .25s ease,box-shadow .25s ease;" style-hover="transform:translateY(-2px);box-shadow:0 12px 28px rgba(216,102,15,0.35);">
+                  <span>{{ activeProject.linkLabel }}</span>
+                  <span aria-hidden="true" style="font-size:15px;">↗</span>
+                </a>
+
+              </div>
+            </sc-if>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:36px;">
+            <sc-if value="{{ activeProject.embed }}" hint-placeholder-val="{{ false }}">
+              <div style="grid-column:1 / -1;position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#140F0B;border:1px solid rgba(20,15,11,0.1);">
+                <iframe src="{{ activeProject.embed }}" title="{{ activeProject.embedTitle }}" allowFullScreen="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+                <div style="position:absolute;top:14px;left:14px;padding:7px 14px;border-radius:999px;background:rgba(10,7,5,0.65);backdrop-filter:blur(8px);color:#FFFFFF;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;pointer-events:none;">{{ activeProject.embedTitle }}</div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ activeProject.showG1 }}" hint-placeholder-val="{{ false }}">
+            <div style="grid-column:1 / -1;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:rgba(20,15,11,0.05);">
+              <x-import component-from-global-scope="image-slot" from="../image-slot.js" id="{{ activeProject.g1 }}" shape="rect" placeholder="Imagen principal del proyecto" style="width:100%;height:100%;" hint-size="100%,100%"></x-import>
+            </div>
+            </sc-if>
+            <div style="aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:rgba(20,15,11,0.05);">
+              <x-import component-from-global-scope="image-slot" from="../image-slot.js" id="{{ activeProject.g2 }}" shape="rect" placeholder="Imagen secundaria" style="width: 100%; height: 100%; background: url(&quot;../screencapture-jhonsteven15-github-io-pla-mrphi4ap-c36d.png&quot;) center / cover no-repeat" hint-size="100%,100%"></x-import>
+            </div>
+            <div style="aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:rgba(20,15,11,0.05);">
+              <x-import component-from-global-scope="image-slot" from="../image-slot.js" id="{{ activeProject.g3 }}" shape="rect" placeholder="Imagen secundaria" style="width:100%;height:100%;" hint-size="100%,100%"></x-import>
+            </div>
+            <sc-if value="{{ activeProject.hasVideo }}" hint-placeholder-val="{{ false }}">
+              <div style="grid-column:1 / -1;aspect-ratio:16/9;border-radius:18px;border:1px dashed rgba(216,102,15,0.45);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#140F0B;">
+                <div style="width:54px;height:54px;border-radius:50%;background:rgba(216,102,15,0.2);border:1.5px solid rgba(240,149,75,0.5);display:flex;align-items:center;justify-content:center;">
+                  <svg width="16" height="16" viewBox="0 0 18 18"><path d="M5 3 L14 9 L5 15 Z" fill="#F0954B"></path></svg>
+                </div>
+                <span style="font-size:13px;opacity:0.6;">Espacio para video — envíame el archivo y lo integro</span>
+              </div>
+            </sc-if>
+          </div>
+
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(20px,3vw,36px);border-top:1px solid rgba(20,15,11,0.1);padding-top:32px;">
+            <div>
+              <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#D8660F;font-weight:700;margin-bottom:12px;">Herramientas</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                <sc-for list="{{ activeProject.tools }}" as="t" hint-placeholder-count="3">
+                  <span style="padding:6px 14px;border-radius:999px;background:rgba(20,15,11,0.05);border:1px solid rgba(20,15,11,0.15);font-size:12px;color:#140F0B;">{{ t }}</span>
+                </sc-for>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#D8660F;font-weight:700;margin-bottom:12px;">Mi rol</div>
+              <p style="margin:0;font-size:13.5px;line-height:1.65;color:#140F0B;opacity:0.75;">{{ activeProject.role }}</p>
+            </div>
+            <div>
+              <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#D8660F;font-weight:700;margin-bottom:12px;">Objetivos</div>
+              <p style="margin:0;font-size:13.5px;line-height:1.65;color:#140F0B;opacity:0.75;">{{ activeProject.objectives }}</p>
+            </div>
+            <div>
+              <div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#D8660F;font-weight:700;margin-bottom:12px;">Resultados</div>
+              <p style="margin:0;font-size:13.5px;line-height:1.65;color:#140F0B;opacity:0.75;">{{ activeProject.results }}</p>
+            </div>
+          </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- BANNER: Contacto -->
+  <div aria-hidden="true" style="position:relative;z-index:2;overflow:hidden;background:#FFFFFF;padding:16px 0;">
+    <div style="display:flex;width:max-content;animation:marqueeX 50s linear infinite;will-change:transform;">
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Contacto</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#FF7200;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #FF7200;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+      <div style="display:flex;align-items:center;gap:clamp(28px,3vw,48px);padding-right:clamp(28px,3vw,48px);">
+        <sc-for list="{{ marqueeReps }}" as="r" hint-placeholder-count="4">
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">Contacto</span>
+          <span style="font-size:clamp(18px,2vw,26px);color:#FF7200;line-height:1;">✱</span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(17px,1.8vw,24px);letter-spacing:0.06em;text-transform:uppercase;color:#140F0B;white-space:nowrap;">2026</span>
+          <span style="width:clamp(12px,1.4vw,18px);height:clamp(12px,1.4vw,18px);border-radius:50%;border:3px solid #FF7200;flex-shrink:0;"></span>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACTO -->
+  <section id="contacto" data-screen-label="Contacto" ref="{{ setContactSection }}" style="position: relative; z-index: 1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(56px,9vh,110px); padding: clamp(90px,12vh,140px) 0; text-align: center; background-color: #FF7200; overflow: hidden">
+    <h2 ref="{{ setContactTitle }}" style="margin:0;font-family:'Poppins',sans-serif;font-weight:900;font-size:clamp(4rem,16.5vw,20rem);line-height:0.82;letter-spacing:-0.04em;color:#FFFFFF;text-transform:uppercase;white-space:nowrap;will-change:transform;transform-origin:50% 100%;">Contacto</h2>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vh,44px);">
+      <a href="mailto:jhonsteven150102@hotmail.com" style="font-family: 'Poppins',sans-serif; font-weight: 800; font-size: clamp(1rem,2vw,1.5rem); letter-spacing: 0.06em; text-transform: uppercase; color: #FFFFFF; transition: color .25s" style-hover="color:#FFFFFF;">jhonsteven150102@hotmail.com</a>
+      <div style="display:flex;gap:clamp(24px,4vw,56px);flex-wrap:wrap;justify-content:center;">
+        <a href="https://www.linkedin.com/in/jhon-steven-penilla-ramirez-282188203/" target="_blank" rel="noreferrer" style="font-family: 'Poppins',sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FFFFFF; transition: color .25s" style-hover="color:#FFFFFF;">LinkedIn</a>
+        <a href="https://github.com/jhonsteven15" target="_blank" rel="noreferrer" style="font-family: 'Poppins',sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FFFFFF; transition: color .25s" style-hover="color:#FFFFFF;">GitHub</a>
+        <a href="https://www.instagram.com/jhonstevenp/" target="_blank" rel="noreferrer" style="font-family: 'Poppins',sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #FFFFFF; transition: color .25s" style-hover="color:#FFFFFF;">Instagram</a>
+        
+      </div>
+      <p style="margin: 0; font-family: 'Poppins',sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #FFFFFF">+57 310 209 2564</p><p style="margin: 0; font-family: 'Cormorant Garamond',serif; font-style: italic; font-weight: 500; font-size: 22px; line-height: 1.15; color: #FFFFFF">Gracias por ver mi portafolio</p>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:22px;margin-top:clamp(8px,2vh,24px);">
+      
+      <a href="#inicio" style="display:inline-flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#FFFFFF;opacity:0.85;transition:opacity .25s;" style-hover="opacity:1;">Volver arriba <span aria-hidden="true">↑</span></a>
+      <p style="margin:0;font-family:ui-monospace,monospace;font-size:11px;letter-spacing:0.04em;color:#FFFFFF;opacity:0.55;">Jhon Steven Penilla — 2026</p>
+    </div>
+  </section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1000}, &quot;particleDensity&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 7, &quot;min&quot;: 0, &quot;max&quot;: 10, &quot;step&quot;: 1, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Ambiente&quot;}, &quot;showAISection&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contenido&quot;}, &quot;enableTilt&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Interacción&quot;}}">
+class Component extends DCLogic {
+  mouse = { x: 0, y: 0 };
+  state = { activeId: null, closing: false, modelIdx: 0, expOpen: 0 };
+
+  experience = [
+    { company: 'Orbidi Digital', period: '2025 – 2026', role: 'Diseñador UX/UI', bullets: [
+      'Diseño de interfaces web (UX/UI) desde cero y mejora de proyectos existentes según requerimientos del cliente.',
+      'Atención y resolución de solicitudes sobre sitios web activos, ajustando y optimizando la experiencia del usuario.',
+      'Apoyo en tareas de diseño gráfico y redacción de contenido (copywriting) con enfoque centrado en el usuario.',
+    ] },
+    { company: 'Agencia Genelypse', period: '2023 – 2025', role: 'Creativo / Diseñador', bullets: [
+      'Gestión de contenido para múltiples cuentas de redes sociales, incluyendo creación de piezas gráficas y videos (reels).',
+      'Desarrollo de landing pages para clientes de la agencia.',
+      'Supervisión de comentarios y análisis de métricas mensuales para optimizar el rendimiento del contenido.',
+    ] },
+    { company: 'Fortox Security Group', period: '2022 – 2023', role: 'Diseñador Gráfico', bullets: [
+      'Creación de piezas gráficas para comunicaciones internas de la empresa.',
+      'Edición de videos corporativos y material audiovisual de comunicación interna.',
+    ] },
+  ];
+
+  toggleExp = (i) => this.setState((s) => ({ expOpen: s.expOpen === i ? -1 : i }));
+
+  models360 = [
+    { name: 'Grano verde', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/SEMILLAS/SemillaVerde.glb' },
+    { name: 'Pintón', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/SEMILLAS/Pinton.glb' },
+    { name: 'Maduro', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/SEMILLAS/Maduro.glb' },
+    { name: 'Sobremaduro', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/SEMILLAS/Sobremaduro.glb' },
+    { name: 'Seco', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/SEMILLAS/Seco%20(1).glb' },
+    { name: 'Despulpadora', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/Despulpadora%20Rojo.glb' },
+    { name: 'Fermentadora', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/Fermentadora.glb' },
+    { name: 'Secador solar', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/Secador.glb' },
+    { name: 'Sacos de café', src: 'https://jhonsteven15.github.io/Plataforma.github.io/Assets/coffee_bags.glb' },
+  ];
+
+  prevModel = () => this.setState(s => ({ modelIdx: (s.modelIdx + this.models360.length - 1) % this.models360.length }));
+  nextModel = () => this.setState(s => ({ modelIdx: (s.modelIdx + 1) % this.models360.length }));
+  pauseModels = () => { this._modelsPaused = true; };
+  resumeModels = () => { this._modelsPaused = false; };
+
+  projects = [
+    { id: 'figma', title: 'Figma', modalTitle: 'Bakalao Project', kicker: 'Diseño UX/UI · Figma', rot: -2.5, coverId: 'car-figma-cover', cover: '../assets/cover-figma.png',
+      description: 'Diseño y prototipado de un sitio web completo en Figma: identidad visual, sistema de componentes y flujo de navegación, del wireframe al prototipo interactivo.',
+      tools: ['Figma'], caseYear: '2025', caseStudy: true,
+      caseBlocks: [
+        { type: 'section', title: 'El sitio', text: 'Una landing narrativa que presenta el proyecto y guía al visitante hasta el formulario de participación.' },
+        { type: 'device', src: '../assets/figma-inicio.png', caption: 'El sitio en escritorio — recorre solo para ver el diseño de arriba a abajo.' },
+        { type: 'section', title: 'Secciones clave', text: 'Concepto, llamado a la acción y contacto — las pantallas que componen el recorrido.' },
+        { type: 'imggrid', images: ['../assets/figma-proyecto.png', '../assets/figma-forma.png', '../assets/figma-contacto.png'] },
+        { type: 'section', title: 'Diseño completo', text: 'Vista general del sistema visual y la jerarquía de todas las secciones.' },
+        { type: 'image', src: '../assets/figma-bakalao.jpg' },
+      ] },
+    { id: 'matte', title: 'Matte Painting', modalTitle: 'Matte Painting', kicker: 'Ilustración digital · Photoshop', rot: 2, coverId: 'car-matte-cover', cover: '../assets/cover-matte.png',
+      description: 'Escenarios digitales construidos por composición y pintura en Photoshop: fotografía, cielo, luz y color integrados para crear atmósferas imposibles de fotografiar.',
+      tools: ['Photoshop'], caseYear: '2022 – 2024', caseStudy: true,
+      caseBlocks: [
+        { type: 'section', title: 'El vaquero y el castillo', text: 'Composición fantástica: un jinete contempla un castillo lejano. Cielo, roca, vegetación y personaje fusionados con ajustes de luz y color para una lectura verosímil.' },
+        { type: 'image', src: '../assets/matte-1.jpg' },
+        { type: 'section', title: 'La muerte sigue en vida', text: 'Póster cinematográfico: ambiente espacial y un portal luminoso. Integración de figura, fondo estelar y efectos de iluminación para una pieza de cartel.' },
+        { type: 'image', src: '../assets/matte-poster.jpg' },
+      ] },
+    { id: '3d', title: '3D', modalTitle: 'Modelado y Animación 3D', kicker: '3D · Modelado y animación', rot: -1.5, coverId: 'car-3d-cover', cover: '../assets/cover-3d.png',
+      description: 'Modelado, texturizado y animación 3D desarrollados en la universidad: un recorrido explicativo y un personaje publicado en Sketchfab.',
+      tools: ['3ds Max', 'Blender'], caseYear: '2022 – 2024', caseStudy: true,
+      caseBlocks: [
+        { type: 'section', title: 'Recorrido 3D — Arepas de choclo', text: 'Recorrido animado que explica, paso a paso, el proceso de elaboración de las arepas de choclo. Trabajo universitario destacado por el docente.' },
+        { type: 'embed', src: 'https://www.youtube-nocookie.com/embed/TCX1jB9kHMc', caption: 'Recorrido completo en video.' },
+        { type: 'section', title: 'Jack — Personaje 3D', text: 'Modelo de personaje publicado en Sketchfab. Gíralo, acércalo y explóralo aquí mismo.' },
+        { type: 'embed', src: 'https://sketchfab.com/models/607e2a5b38574b9abf84d12df4e5a1ac/embed?autostart=1&ui_infos=0&ui_watermark=0&ui_hint=0', caption: 'Modelo interactivo en Sketchfab.' },
+        { type: 'section', title: 'Recorrido 3D — Parcelación', text: 'Proyecto para un cliente real: recorrido 3D de una parcelación, usado para mostrar y vender los lotes disponibles.' },
+        { type: 'embed', src: 'https://www.youtube-nocookie.com/embed/rXmiR1D36x8', caption: 'Recorrido 3D de la parcelación.' },
+      ] },
+    { id: 'social', title: 'Social Media', modalTitle: 'Gestión de Redes Sociales', kicker: 'Contenido · Diseño gráfico', rot: 2.5, coverId: 'car-social-cover', cover: '../assets/cover-social.png',
+      description: 'Piezas gráficas y reels para marcas reales, organizados por cuenta: diseño de feed, campañas y edición de video.',
+      tools: ['Photoshop', 'Illustrator', 'CapCut', 'Premiere'], caseYear: '2024 – 2026', caseStudy: true,
+      caseBlocks: [
+        { type: 'section', title: 'Escuela Automovilística Elite', text: 'Gestión de contenido y línea gráfica del feed: promociones, fechas especiales y campañas de matrícula.' },
+        { type: 'slider', images: ['../assets/sm-elite-1.jpg', '../assets/sm-elite-2.jpg', '../assets/sm-elite-3.jpg', '../assets/sm-elite-4.jpg', '../assets/sm-elite-5.jpg', '../assets/sm-elite-6.jpg', '../assets/sm-elite-7.jpg', '../assets/sm-elite-8.jpg', '../assets/sm-elite-9.jpg', '../assets/sm-elite-10.jpg'] },
+        { type: 'reels', videos: ['../assets/sm-elite-reel-1.mp4', '../assets/sm-elite-reel-2.mp4', '../assets/sm-elite-reel-3.mp4'] },
+        { type: 'section', title: 'Escuela Automovilística TTC', text: 'Línea gráfica hermana con identidad propia para TTC.' },
+        { type: 'slider', images: ['../assets/sm-ttc-1.jpg', '../assets/sm-ttc-2.jpg', '../assets/sm-ttc-3.jpg', '../assets/sm-ttc-4.png', '../assets/sm-ttc-5.jpg', '../assets/sm-ttc-6.jpg', '../assets/sm-ttc-7.png'] },
+        { type: 'reels', videos: ['../assets/sm-ttc-reel-1.mp4', '../assets/sm-ttc-reel-2.mp4', '../assets/sm-ttc-reel-3.mp4'] },
+        { type: 'section', title: 'Expoindígenas', text: 'Serie de posts para el evento Expoindígenas.' },
+        { type: 'slider', images: ['../assets/sm-expo-1.jpg', '../assets/sm-expo-2.jpg', '../assets/sm-expo-3.jpg', '../assets/sm-expo-4.jpg', '../assets/sm-expo-5.jpg', '../assets/sm-expo-6.jpg', '../assets/sm-expo-7.jpg'] },
+        { type: 'section', title: 'Dolce Vicolo', text: 'Prueba técnica desarrollada para una entrevista laboral: pieza gráfica de marca y animación de ambiente.' },
+        { type: 'image', src: '../assets/matte-historia.jpg', caption: 'Pieza gráfica de marca.' },
+        { type: 'video', src: '../assets/3d-dolce-vicolo.mp4', caption: 'Animación de ambiente para Dolce Vicolo.' },
+        { type: 'section', title: 'Vandalovers', text: 'Proyecto realizado durante la universidad.' },
+        { type: 'reels', videos: ['../assets/sm-vanda-reel.mp4'] },
+      ] },
+    { id: '360', title: '360°', modalTitle: 'Ruta Virtual del Café', kicker: 'Experiencia inmersiva · Proyecto de grado', rot: -2, coverId: 'car-360-cover', cover: '../assets/cover-360.png',
+      description: 'Plataforma web interactiva para enseñar la Cadena Productiva del Café: recorrido 360°, modelos 3D, audio y video que conectan cada fase del proceso, del grano a la taza.',
+      tools: ['PTGui', '360°', '3D', 'Web'], caseYear: '2023', caseStudy: true,
+      link: 'https://jhonsteven15.github.io/Plataforma.github.io/', linkLabel: 'Ver plataforma en vivo',
+      caseBlocks: [
+        { type: 'section', title: 'El recorrido', text: 'Tour navegable por la finca de Café MamaLuna: panorámicas capturadas y cosidas con PTGui, con audio ambiente por etapa. Interactúa directamente aquí.' },
+        { type: 'embed', src: 'https://tour-360.vercel.app/', caption: 'Recorrido virtual 360° — arrastra para mirar alrededor.' },
+        { type: 'section', title: 'Vistas de la plataforma', text: 'Fichas de cada fase del proceso, del cultivo al empaque.' },
+        { type: 'imggrid', cols: 3, images: ['../assets/view-datos.png', '../assets/view-maduracion.png', '../assets/view-despulpadora.png', '../assets/view-biorreactor.png', '../assets/view-secador.png', '../assets/view-sacos.png'] },
+        { type: 'section', title: 'Modelos 3D', text: 'Los 9 modelos desarrollados para la plataforma: los estados del grano y la maquinaria del beneficio. Gira, acerca y explora cada uno — cambian automáticamente cada pocos segundos.' },
+        { type: 'models' },
+      ] },
+  ];
+
+  // ── Carrusel infinito: drag + inercia + auto-drift, posición en módulo ──
+  setCarouselViewport = (el) => {
+    if (!el || this._carVp === el) return;
+    this._carVp = el;
+    el.addEventListener('pointerdown', this.carDown);
+    el.addEventListener('pointermove', this.carMove);
+    el.addEventListener('pointerup', this.carUp);
+    el.addEventListener('pointercancel', this.carUp);
+    this.startCarLoop();
+  };
+  setCarouselTrack = (el) => { if (el) this._carTrack = el; };
+  getCarTrack() {
+    if (this._carTrack && this._carTrack.isConnected) return this._carTrack;
+    const el = document.querySelector('[data-car-track]');
+    if (el) this._carTrack = el;
+    return this._carTrack;
+  }
+  ensureCarViewport() {
+    if (this._carVp && this._carVp.isConnected) return this._carVp;
+    const el = document.querySelector('[data-car-viewport]');
+    if (el && el !== this._carVp) this.setCarouselViewport(el);
+    return this._carVp;
+  }
+
+  carDown = (e) => {
+    if (!this._carTrack) return;
+    this._dragging = true;
+    this._dragTotal = 0;
+    this._lastX = e.clientX;
+    this._vel = 0;
+    this._carVp.setPointerCapture(e.pointerId);
+    this._carVp.style.cursor = 'grabbing';
+  };
+  carMove = (e) => {
+    if (!this._dragging) return;
+    if (!this.getCarTrack()) return;
+    const dx = e.clientX - this._lastX;
+    this._lastX = e.clientX;
+    this._dragTotal += Math.abs(dx);
+    this._pos -= dx;
+    this._vel = -dx;
+  };
+  carUp = (e) => {
+    if (!this._dragging) return;
+    this._dragging = false;
+    this._carVp.style.cursor = 'grab';
+    try { this._carVp.releasePointerCapture(e.pointerId); } catch (_) {}
+    // El pointer capture redirige el click al viewport: si el gesto fue un
+    // click (no drag), resolvemos la card por hit-test y abrimos el modal.
+    if (this._dragTotal < 8) {
+      const hit = document.elementFromPoint(e.clientX, e.clientY);
+      const card = hit && hit.closest('[data-project-id]');
+      if (card) this.openProjectById(card.dataset.projectId);
+    }
+  };
+
+  openProjectById(id) {
+    if (!id || this.state.activeId === id) return;
+    this.setState({ activeId: id, closing: false });
+    document.body.style.overflow = 'hidden';
+  }
+
+  startCarLoop() {
+    if (this._carRaf) return;
+    this._pos = Number.isFinite(this._pos) ? this._pos : 0;
+    this._vel = Number.isFinite(this._vel) ? this._vel : 0;
+    const tick = () => {
+      this._carRaf = requestAnimationFrame(tick);
+      this.ensureCarViewport();
+      const track = this.getCarTrack();
+      if (!track) return;
+      const setW = track.scrollWidth / 3;
+      if (!setW) return;
+      if (!this._dragging) {
+        // inercia con decaimiento + deriva automática suave
+        this._vel *= 0.94;
+        if (Math.abs(this._vel) < 0.05) this._vel = 0;
+        const drift = this.state.activeId ? 0 : 0.45;
+        this._pos += this._vel + drift;
+      }
+      // wrap en módulo: loop infinito sin salto visible
+      this._pos = ((this._pos % setW) + setW) % setW;
+      track.style.transform = `translate3d(${-this._pos}px,0,0)`;
+      // arco: cada tarjeta se transforma según su distancia al centro del viewport
+      const vp = this._carVp;
+      if (vp) {
+        const vpW = vp.clientWidth;
+        const half = vpW / 2;
+        for (const card of track.children) {
+          const cx = card.offsetLeft + card.offsetWidth / 2 - this._pos;
+          let n = (cx - half) / half; // -1 izquierda, 0 centro, 1 derecha
+          if (n < -1.6 || n > 1.6) { card.style.transform = ''; continue; }
+          const y = n * n * 54;                       // curva parabólica (rueda)
+          const rot = n * 7;                          // tangente a la curva
+          const scale = 1.06 - Math.min(Math.abs(n), 1) * 0.12; // centro protagonista
+          card.style.transform = `translateY(${y}px) rotate(${rot}deg) scale(${scale})`;
+        }
+      }
+    };
+    tick();
+  }
+
+  openProject = (e) => {
+    if (this._dragTotal > 8) return; // fue un drag, no un click
+    this.openProjectById(e.currentTarget.dataset.projectId);
+  };
+  closeProject = () => {
+    if (!this.state.activeId || this.state.closing) return;
+    this.setState({ closing: true });
+    this._closeTimer = setTimeout(() => {
+      this.setState({ activeId: null, closing: false });
+      document.body.style.overflow = '';
+    }, 300);
+  };
+
+  // ── Título CONTACTO ligado al scroll: squash & stretch vertical ──
+  // Ancho fijo edge-to-edge (scaleX de ajuste al viewport); la ALTURA de las
+  // letras crece con el scroll (scaleY 0.3→1) con leve ensanchamiento extra
+  // cuando está aplastado (conservación de volumen).
+  setContactSection = (el) => { if (el) this._ctSec = el; };
+  setContactTitle = (el) => { if (el) this._ctTitle = el; };
+  startContactLoop() {
+    if (this._ctRaf) return;
+    this._ctP = 0;
+    const tick = () => {
+      this._ctRaf = requestAnimationFrame(tick);
+      if (!this._ctSec || !this._ctSec.isConnected) this._ctSec = document.getElementById('contacto');
+      if (!this._ctTitle || !this._ctTitle.isConnected) this._ctTitle = this._ctSec ? this._ctSec.querySelector('h2') : null;
+      const sec = this._ctSec, t = this._ctTitle;
+      if (!sec || !t) return;
+      const r = sec.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // 0 cuando el borde superior de la sección entra por abajo; 1 cuando llega arriba
+      let p = 1 - r.top / (vh * 0.92);
+      p = Math.max(0, Math.min(1, p));
+      this._ctP += (p - this._ctP) * 0.16; // lerp corto: ligado al scroll pero sin jitter
+      const e2 = 1 - Math.pow(1 - this._ctP, 2); // ease-out
+      const natW = t.offsetWidth || 1; // offsetWidth ignora transforms
+      const fitX = (window.innerWidth / natW) * (1 + (1 - e2) * 0.04);
+      const sy = 0.3 + e2 * 0.7;
+      t.style.transform = `scale(${fitX.toFixed(4)}, ${sy.toFixed(4)})`;
+    };
+    tick();
+  }
+  closeProjectFromBackdrop = (e) => {
+    if (e.target.closest('[data-modal-panel]')) return;
+    this.closeProject();
+  };
+
+  software = [
+    { name: 'Photoshop', short: 'Ps', color: '#001E36' },
+    { name: 'Illustrator', short: 'Ai', color: '#330000' },
+    { name: 'Clip Studio', short: 'CSP', color: 'rgba(237,238,242,0.15)' },
+    { name: 'Premiere', short: 'Pr', color: '#00005B' },
+    { name: 'After Effects', short: 'Ae', color: '#00005B' },
+    { name: '3ds Max', short: '3ds', color: '#0B0B0B' },
+    { name: 'Animate', short: 'An', color: '#4300B1' },
+    { name: 'Lightroom', short: 'Lr', color: '#001E36' },
+    { name: 'Blender', short: 'Bl', color: '#E87D0D' },
+  ];
+
+  languages = [
+    { name: 'Español', level: 'Nativo' },
+    { name: 'Inglés', level: 'Intermedio' },
+  ];
+
+  personalSkills = ['Ágil', 'Responsable', 'Determinado', 'Creativo', 'Buena Comunicación'];
+
+  socialProjects = [
+    { id: 'proj-social-1', title: 'Escuela de Manejo', tag: 'Reel · Redes sociales', placeholder: 'Sube un reel o post' },
+    { id: 'proj-social-2', title: 'Escuela de Manejo', tag: 'Post · Redes sociales', placeholder: 'Sube un post' },
+    { id: 'proj-social-3', title: 'Marca de Productos Naturales', tag: 'Etiquetas', placeholder: 'Sube la etiqueta' },
+    { id: 'proj-social-4', title: 'Marca de Productos Naturales', tag: 'Volante', placeholder: 'Sube el volante' },
+  ];
+
+  threeDProjects = [
+    { id: 'proj-3d-1', title: 'Modelo 3D', tag: 'Modelado', placeholder: 'Sube el render del modelo', isVideo: false },
+    { id: 'proj-3d-2', title: 'Video 3D I', tag: 'Animación 3D', placeholder: 'Sube el thumbnail del video', isVideo: true },
+    { id: 'proj-3d-3', title: 'Video 3D II', tag: 'Animación 3D', placeholder: 'Sube el thumbnail del video', isVideo: true },
+  ];
+
+  mattePaintingProjects = [
+    { id: 'proj-matte-1', title: 'Matte Painting I', tag: 'Ilustración digital', placeholder: 'Sube la ilustración' },
+    { id: 'proj-matte-2', title: 'Matte Painting II', tag: 'Ilustración digital', placeholder: 'Sube la ilustración' },
+  ];
+
+  aiProjects = [
+    { id: 'proj-ai-1', title: 'Experimento IA 01', placeholder: 'Sube una vista previa' },
+    { id: 'proj-ai-2', title: 'Experimento IA 02', placeholder: 'Sube una vista previa' },
+  ];
+
+  buildSlider(images) {
+    if (!images.length) return null;
+    const dur = Math.max(18, images.length * 4.2);
+    const makeImg = (src, k) => React.createElement('img', {
+      key: k, src, alt: '', draggable: false,
+      style: { height: 'clamp(230px,30vh,320px)', width: 'auto', display: 'block', borderRadius: 14, flex: '0 0 auto', border: '1px solid rgba(20,15,11,0.1)', boxShadow: '0 12px 28px rgba(20,15,11,0.12)' },
+    });
+    const seq = images.concat(images);
+    const track = React.createElement('div', {
+      className: 'mq-track',
+      style: { display: 'flex', gap: 16, width: 'max-content', animation: `marquee ${dur}s linear infinite` },
+    }, seq.map((src, i) => makeImg(src, i)));
+    return React.createElement('div', {
+      className: 'mq',
+      style: { overflow: 'hidden', WebkitMaskImage: 'linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)', maskImage: 'linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)' },
+    }, track);
+  }
+
+  galleryPrev = (e) => {
+    const g = e.currentTarget.parentElement.querySelector('[data-gallery]');
+    if (g) g.scrollBy({ left: -g.clientWidth * 0.7, behavior: 'smooth' });
+  };
+  galleryNext = (e) => {
+    const g = e.currentTarget.parentElement.querySelector('[data-gallery]');
+    if (g) g.scrollBy({ left: g.clientWidth * 0.7, behavior: 'smooth' });
+  };
+
+  setVideoRef = (el) => {
+    if (!el) return;
+    this._videoEl = el;
+    el.muted = true;
+    el.loop = true;
+    el.playsInline = true;
+    const tryPlay = () => el.play().catch(() => {});
+    tryPlay();
+    el.addEventListener('loadedmetadata', tryPlay, { once: true });
+  };
+
+  componentDidMount() {
+    this._onMouseMove = (e) => {
+      this.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+      this.mouse.y = (e.clientY / window.innerHeight) * 2 - 1;
+    };
+    window.addEventListener('mousemove', this._onMouseMove);
+
+    this._onResize = () => {
+      if (this._three) {
+        const { renderer, camera } = this._three;
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      }
+    };
+    window.addEventListener('resize', this._onResize);
+
+    this._onKeyDown = (e) => { if (e.key === 'Escape') this.closeProject(); };
+    window.addEventListener('keydown', this._onKeyDown);
+
+    setTimeout(() => this.initReveal(), 60);
+    this.startCarLoop();
+    this.startContactLoop();
+    this._modelTimer = setInterval(() => {
+      if (this.state.activeId === '360' && !this.state.closing && !this._modelsPaused) this.nextModel();
+    }, 6000);
+  }
+
+  componentWillUnmount() {
+    if (this._rafId) cancelAnimationFrame(this._rafId);
+    if (this._carRaf) cancelAnimationFrame(this._carRaf);
+    if (this._ctRaf) cancelAnimationFrame(this._ctRaf);
+    if (this._closeTimer) clearTimeout(this._closeTimer);
+    if (this._modelTimer) clearInterval(this._modelTimer);
+    if (this._onKeyDown) window.removeEventListener('keydown', this._onKeyDown);
+    document.body.style.overflow = '';
+    if (this._onMouseMove) window.removeEventListener('mousemove', this._onMouseMove);
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._io) this._io.disconnect();
+    if (this._revealSweep) clearInterval(this._revealSweep);
+    if (this._three) this._three.renderer.dispose();
+  }
+
+  loadThree() {
+    if (window.THREE) return Promise.resolve();
+    return import('https://unpkg.com/three@0.160.0/build/three.module.js')
+      .then((mod) => { window.THREE = mod; })
+      .catch(() => {});
+  }
+
+  makeStarTexture() {
+    const size = 64;
+    const c = document.createElement('canvas');
+    c.width = size; c.height = size;
+    const ctx = c.getContext('2d');
+    const grad = ctx.createRadialGradient(size / 2, size / 2, 0, size / 2, size / 2, size / 2);
+    grad.addColorStop(0, 'rgba(255,255,255,1)');
+    grad.addColorStop(0.25, 'rgba(255,255,255,0.9)');
+    grad.addColorStop(0.6, 'rgba(255,255,255,0.25)');
+    grad.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, size, size);
+    return new window.THREE.CanvasTexture(c);
+  }
+
+  initParticles() {
+    const THREE = window.THREE;
+    const canvas = this._canvasEl;
+    if (!THREE || !canvas) return;
+    const starTexture = this.makeStarTexture();
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.z = 6;
+
+    const density = this.props.particleDensity ?? 7;
+    const count = 250 + density * 130;
+    const positions = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 22;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 22;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 16 - 2;
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    const materialA = new THREE.PointsMaterial({ color: new THREE.Color('#7FB2D9'), size: 0.09, map: starTexture, transparent: true, opacity: 0.85, sizeAttenuation: true, alphaTest: 0.01, depthWrite: false, blending: THREE.AdditiveBlending });
+    const pointsA = new THREE.Points(geometry, materialA);
+    scene.add(pointsA);
+
+    const count2 = Math.floor(count * 0.4);
+    const positions2 = new Float32Array(count2 * 3);
+    for (let i = 0; i < count2; i++) {
+      positions2[i * 3] = (Math.random() - 0.5) * 22;
+      positions2[i * 3 + 1] = (Math.random() - 0.5) * 22;
+      positions2[i * 3 + 2] = (Math.random() - 0.5) * 16 - 2;
+    }
+    const geometry2 = new THREE.BufferGeometry();
+    geometry2.setAttribute('position', new THREE.BufferAttribute(positions2, 3));
+    const materialB = new THREE.PointsMaterial({ color: new THREE.Color('#D8660F'), size: 0.065, map: starTexture, transparent: true, opacity: 0.7, sizeAttenuation: true, alphaTest: 0.01, depthWrite: false, blending: THREE.AdditiveBlending });
+    const pointsB = new THREE.Points(geometry2, materialB);
+    scene.add(pointsB);
+
+    this._three = { renderer, scene, camera, pointsA, pointsB };
+
+    const animate = () => {
+      this._rafId = requestAnimationFrame(animate);
+      pointsA.rotation.y += 0.0006;
+      pointsA.rotation.x += 0.0002;
+      pointsB.rotation.y -= 0.0004;
+      camera.position.x += (this.mouse.x * 0.8 - camera.position.x) * 0.02;
+      camera.position.y += (-this.mouse.y * 0.8 - camera.position.y) * 0.02;
+      camera.lookAt(scene.position);
+      renderer.render(scene, camera);
+    };
+    animate();
+  }
+
+  revealEl(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+  }
+
+  isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight * 1.05 && rect.bottom > -100;
+  }
+
+  initReveal() {
+    const els = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach((el) => this.revealEl(el));
+      return;
+    }
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.revealEl(entry.target);
+          this._io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+    els.forEach((el) => {
+      // Defensive: reveal immediately if already within/near the viewport
+      // (covers anchor/hash navigation and cases where IO misses the initial state).
+      if (this.isInViewport(el)) {
+        this.revealEl(el);
+      } else {
+        this._io.observe(el);
+      }
+    });
+
+    // Safety net: periodically sweep for any still-hidden elements that are
+    // now in view (covers programmatic scroll / edge timing issues).
+    this._revealSweep = setInterval(() => {
+      const hidden = document.querySelectorAll('[data-reveal]');
+      let anyHidden = false;
+      hidden.forEach((el) => {
+        if (el.style.opacity !== '1') {
+          anyHidden = true;
+          if (this.isInViewport(el)) {
+            this.revealEl(el);
+            if (this._io) this._io.unobserve(el);
+          }
+        }
+      });
+      if (!anyHidden) clearInterval(this._revealSweep);
+    }, 400);
+  }
+
+  handleTilt = (e) => {
+    if (this.props.enableTilt === false) return;
+    const el = e.currentTarget;
+    const rect = el.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width - 0.5;
+    const py = (e.clientY - rect.top) / rect.height - 0.5;
+    const max = Number(el.dataset.tiltMax || 8);
+    el.style.transform = `perspective(900px) rotateY(${px * max}deg) rotateX(${-py * max}deg) scale(1.03)`;
+  };
+
+  resetTilt = (e) => {
+    e.currentTarget.style.transform = 'perspective(900px) rotateY(0deg) rotateX(0deg) scale(1)';
+  };
+
+  renderVals() {
+    const activeBase = this.projects.find((p) => p.id === this.state.activeId) || this.projects[0];
+    return {
+      carouselItems: [...this.projects, ...this.projects, ...this.projects].map((p) => ({
+        ...p,
+        coverEl: React.createElement('img', {
+          src: p.cover, alt: p.title, draggable: false,
+          style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', padding: 34, pointerEvents: 'none', filter: 'drop-shadow(0 18px 30px rgba(0,0,0,0.4))' },
+        }),
+      })),
+      setCarouselViewport: this.setCarouselViewport,
+      setCarouselTrack: this.setCarouselTrack,
+      openProject: this.openProject,
+      closeProject: this.closeProject,
+      closeProjectFromBackdrop: this.closeProjectFromBackdrop,
+      modalOpen: !!this.state.activeId,
+      backdropAnim: this.state.closing ? 'fadeOut .3s ease forwards' : 'fadeIn .35s ease',
+      panelAnim: this.state.closing ? 'modalOut .3s cubic-bezier(.4,0,.2,1) forwards' : 'modalIn .5s cubic-bezier(.22,.9,.3,1)',
+      marqueeReps: [0, 1, 2, 3],
+      experienceItems: this.experience.map((ex, i) => ({
+        ...ex,
+        isOpen: this.state.expOpen === i,
+        arrow: this.state.expOpen === i ? 'rotate(180deg)' : 'rotate(0deg)',
+        displayVal: this.state.expOpen === i ? 'block' : 'none',
+        toggle: () => this.toggleExp(i),
+      })),
+      setContactSection: this.setContactSection,
+      setContactTitle: this.setContactTitle,
+      activeProject: { ...activeBase, showG1: !activeBase.embed },
+      isCaseStudy: !!activeBase.caseStudy,
+      currentModelSrc: this.models360[this.state.modelIdx].src,
+      currentModelName: this.models360[this.state.modelIdx].name,
+      modelCounter: (this.state.modelIdx + 1) + ' / ' + this.models360.length,
+      modelDots: this.models360.map((m, i) => ({
+        name: m.name,
+        bg: i === this.state.modelIdx ? '#FF7200' : 'rgba(20,15,11,0.25)',
+        go: () => this.setState({ modelIdx: i }),
+      })),
+      prevModel: this.prevModel, nextModel: this.nextModel,
+      pauseModels: this.pauseModels, resumeModels: this.resumeModels,
+      isLegacy: !activeBase.caseStudy,
+      caseBlocks: (() => {
+        let sec = 0;
+        return (activeBase.caseBlocks || []).map((b) => {
+          const isSection = b.type === 'section';
+          if (isSection) sec += 1;
+          return {
+            ...b,
+            num: isSection ? String(sec).padStart(2, '0') : '',
+            isSection,
+            isEmbed: b.type === 'embed',
+            isModels: b.type === 'models',
+            isVideo: b.type === 'video',
+            isReels: b.type === 'reels',
+            isSlider: b.type === 'slider',
+            isBrowser: b.type === 'browser',
+            isGrid: b.type === 'imggrid',
+            isDevice: b.type === 'device',
+            deviceImgEl: b.type === 'device' ? React.createElement('img', { src: b.src, alt: b.title || '', draggable: false, style: { width: '100%', height: 'auto', display: 'block', animation: 'deviceScroll 9s ease-in-out infinite', willChange: 'transform' } }) : null,
+            frameImgEl: b.type === 'device' ? React.createElement('img', { src: b.frame || '../assets/mockup-laptop.png', alt: 'Mockup', draggable: false, style: { position: 'absolute', inset: 0, zIndex: 2, width: '100%', height: '100%', objectFit: 'contain', display: 'block', pointerEvents: 'none' } }) : null,
+            cols: b.cols || 2,
+            gridImgs: (b.images || []).map((src) => ({ imgEl: React.createElement('img', { src, alt: '', draggable: false, style: { width: '100%', display: 'block' } }) })),
+            tall: !!b.tall,
+            reelVids: (b.videos || []).map((src) => ({ src })),
+            sliderEl: b.type === 'slider' ? this.buildSlider(b.images || []) : null,
+            browserImgEl: b.type === 'browser' ? React.createElement('img', { src: b.src, alt: b.title || '', style: { width: '100%', height: 'auto', display: 'block' } }) : null,
+            imgEl: b.type === 'image' ? React.createElement('img', { src: b.src, alt: b.title || '', style: { width: '100%', height: 'auto', display: 'block' } }) : null,
+          };
+        });
+      })(),
+      caseHeroEl: activeBase.caseHero ? React.createElement('img', {
+        src: activeBase.caseHero, alt: activeBase.title,
+        style: { width: '100%', height: 'auto', display: 'block', filter: 'drop-shadow(0 26px 44px rgba(20,15,11,0.3))' },
+      }) : null,
+      caseHeroVideoEl: activeBase.caseHeroVideo ? React.createElement('video', {
+        src: activeBase.caseHeroVideo, ref: this.setVideoRef, controls: true,
+        style: activeBase.heroVertical
+          ? { height: 'min(56vh, 520px)', width: 'auto', maxWidth: '100%', display: 'block', borderRadius: 22, boxShadow: '0 30px 60px rgba(20,15,11,0.3)', background: '#140F0B' }
+          : { width: '100%', display: 'block', borderRadius: 16, boxShadow: '0 30px 60px rgba(20,15,11,0.3)', background: '#140F0B' },
+      }) : null,
+      caseHeroScreenEl: activeBase.caseHeroScreen ? React.createElement('img', {
+        src: activeBase.caseHeroScreen, alt: activeBase.title,
+        style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' },
+      }) : null,
+      galleryPrev: this.galleryPrev, galleryNext: this.galleryNext,
+      setVideoRef: this.setVideoRef,
+      software: this.software,
+      languages: this.languages,
+      personalSkills: this.personalSkills,
+      socialProjects: this.socialProjects,
+      threeDProjects: this.threeDProjects,
+      mattePaintingProjects: this.mattePaintingProjects,
+      aiProjects: this.aiProjects,
+      showAISection: this.props.showAISection ?? true,
+      handleTilt: this.handleTilt,
+      resetTilt: this.resetTilt,
+    };
+  }
+}
+
+</script>
+</body>
+</html>
